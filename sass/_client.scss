@@ -1,0 +1,44 @@
+.client-comment-container {
+    @extend %main-container;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: $f-s-p;
+    text-align: center;
+
+    h3 {
+        font-size: $f-s-title;
+        text-transform: $t-t;
+        margin-bottom: 10px;
+    }
+}
+
+.content-comment {
+    .sample-comment {
+        margin: 50px 0;
+        display: flex;
+        flex-wrap: wrap ;
+        justify-content: center;
+        align-items: center;
+    }
+    .client-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: gray;
+        margin-bottom: 20px;
+    }
+
+    .client-text {
+        background-color: $c-grey;
+        padding: 20px;
+
+        p {
+            &:nth-child(2) {
+                padding-top: 10px; 
+                color: $c-g;
+                font-size: $f-s-small;
+                text-align: left;
+            }
+        }
+    }
+}

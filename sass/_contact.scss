@@ -1,0 +1,21 @@
+.contact-form-container {
+    @extend %main-container;
+    background-color: $c-g;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: $t-t;
+
+    h3 {
+        font-size: $f-s-title;
+        text-align: center;
+    }
+
+    button {
+        @extend %button;
+        border: 2px solid white;
+        margin-top: 20px;
+    }
+}

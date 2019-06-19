@@ -1,0 +1,43 @@
+.services-container {
+    @extend %main-container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: $f-s-p;
+    text-align: center;
+    
+
+        h3 {
+            width: 300px;
+            text-transform: $t-t;
+            font-size: $f-s-title;
+            padding: 25px;
+        }
+
+        .about-page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            div {
+                margin: 0 30px;
+                line-height: 1.5em;
+                
+
+                img {
+                padding: 20px;
+                }
+
+                h4 {
+                    text-transform: $t-t;
+                }
+                p {
+                    font-size: $f-s-small;
+                 }
+            }
+        } 
+    
+
+}

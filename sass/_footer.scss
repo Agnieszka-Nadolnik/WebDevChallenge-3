@@ -1,0 +1,14 @@
+.end-page-footer-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h6 {
+        padding: 15px 0;
+        text-align: center;
+    }
+}

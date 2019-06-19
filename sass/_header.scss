@@ -1,0 +1,38 @@
+.header-container {
+    position: fixed;
+    width:100%;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+    .hamburger {
+        z-index: 2;
+    }
+
+    nav {
+        position: absolute;
+        width: 50%;
+        padding: 5%;
+        background-color: white;
+        top: 0;
+        right: -50%;
+        transition: 1s;
+        li {
+            font-size: 1em;
+            list-style: none;
+            line-height: 20px;
+            padding: 5%;
+            transition: 0.3s;
+
+            &:hover {
+                padding-left: 10%;
+            }
+        }
+    }
+}
+nav.active-menu {
+    right: 0;
+    
+}
+

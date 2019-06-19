@@ -1,0 +1,56 @@
+.footer-contact-container {
+    @extend %main-container;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+
+    .post-content,
+    .contact-content,
+    .tweet-content {
+        h5 {
+            font-size: $f-s-p;
+            text-transform: $t-t;
+            margin: 5px;
+            cursor: pointer;
+            
+        
+        }
+
+        
+        ul {
+            display: none;
+            
+
+            li {
+                list-style: none;
+                font-size: $f-s-small;
+                display: flex;
+                align-items: center;
+                
+                img {
+                    margin: 10px 10px 10px 0;
+                }
+
+                p {
+                    span {
+                        display: block;
+                        padding-bottom: 5px;
+                        font-size: $f-s-small;
+                    }
+            
+                }
+            }
+
+        }
+
+        ul.active-list-element {
+            display: block;
+        }
+    
+    }
+}
+
+

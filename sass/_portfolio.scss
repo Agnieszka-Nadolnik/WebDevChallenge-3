@@ -1,0 +1,67 @@
+.portfolio-container {
+    @extend %main-container;
+    display: flex;
+    flex-direction: column;
+    font-size: $f-s-p;
+
+    h2 {
+        text-transform: $t-t;
+        padding-bottom: 10px;
+        font-size: $f-s-title;
+    }
+
+    p {
+        padding-bottom: 15px;
+        font-size: $f-s-small;
+        padding-bottom: 30px;
+    }
+
+    .technologies {
+        padding: 25px 0;
+
+        h5 {
+            text-transform: $t-t;
+            padding-bottom: 15px;
+        }
+
+        .content-li {
+            list-style: none;
+            display: flex;
+
+            img {
+                height: 50px;
+                width: 50px;
+                margin-right: 25px;
+            }
+
+            .description {
+                
+                h3 {
+                    text-transform: $t-t;
+                    font-size: $f-s-p;
+                }
+            }
+        }
+    }
+}
+
+.view-link {
+    text-decoration: none;
+    text-transform: $t-t;
+    color: $c-g;
+    display: flex;
+
+    i {
+        animation: arrow 0.5s alternate linear infinite backwards;
+    }
+}
+
+
+@keyframes arrow {
+    0% {
+        margin-left: 15px;
+    }
+    100% {
+        margin-left: 25px;
+    }
+}
