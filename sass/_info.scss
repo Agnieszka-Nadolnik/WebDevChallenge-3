@@ -15,6 +15,10 @@
             text-transform: $t-t;
             margin: 5px;
             cursor: pointer;
+
+            @media #{$tablet} {
+                font-size: 1.2em;
+            }
             
         
         }
@@ -29,9 +33,16 @@
                 font-size: $f-s-small;
                 display: flex;
                 align-items: center;
+                @media #{$tablet} {
+                    font-size: 1em;
+                }
                 
                 img {
                     margin: 10px 10px 10px 0;
+
+                    @media #{$tablet} {
+                        margin: 15px 15px 15px 0;
+                    }
                 }
 
                 p {
@@ -39,6 +50,10 @@
                         display: block;
                         padding-bottom: 5px;
                         font-size: $f-s-small;
+
+                        @media #{$tablet} {
+                          padding-bottom: 10px;
+                        }
                     }
             
                 }

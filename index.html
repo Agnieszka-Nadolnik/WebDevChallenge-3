@@ -14,25 +14,25 @@
             <div class="logo">
                 <img src="./images/Logo.png" alt="logo">
             </div>
-            <div class="hamburger">Menu</div>
+            <button class="menu-toggle">Menu</button>             
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Blog</li>
-                    <li>Portfolio</li>
-                    <li>Contact</li>
+                    <li><a href='#home'>Home</a></li>
+                    <li><a href='#about'>About</a></li>
+                    <li><a href='#blog'>Blog</a></li>
+                    <li><a href='#portfolio'>Portfolio</a></li>
+                    <li><a href='#contact'>Blog</a></li>
                 </ul>
             </nav>
         </section>
-        <section class="banner-container">
+        <section id='home' class="banner-container">
             <div class="main-image">
                 <h1>Creative Digital Solutions</h1>
                 <p>Lorem ipsum dolor sit amet.</p>
                 <button class="button-submit">View Portfolio</button>
             </div>
         </section>
-        <section class="services-container">
+        <section id='about' class="services-container">
                 <h3>professional services</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <div class="about-page-container">
@@ -53,20 +53,25 @@
                     </div>
                 </div>
         </section>
-        <section class="blog-container">
-            <div class="blog-components">
-                <h3>Just Relax <span>&</span></h3>
-                <h3>let us the heavy lifting</h3>
-               <p>Lorem ipsum dolor sit amet, consectetur Lorem, ipsum dolor a. </p> 
-                <ul>
-                    <li>Setup & Customizations</li>
-                    <li>Regular Updates</li>
-                    <li>Round The Clock Support</li>
-                </ul>
-                <button class="button-submit">Learn more</button>
+        <section id='blog' class="blog-container">
+                <div class="img-container">
+                    <img src="./images/icon/gear 2.png" alt="">
+                </div>
+                <div class="blog-components">
+                    <div class="text-blog">
+                    <h3>Just Relax <span>&</span></h3>
+                    <h3>let us the heavy lifting</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur Lorem, ipsum dolor a. </p> 
+                    <ul>
+                        <li>Setup & Customizations</li>
+                        <li>Regular Updates</li>
+                        <li>Round The Clock Support</li>
+                    </ul>
+                    <button class="button-submit">Learn more</button>
+                </div>
             </div>
         </section>
-        <section class="portfolio-container">
+        <section id='portfolio' class="portfolio-container">
             <h2>Latest Project</h2>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
             <div class="technologies">
@@ -145,7 +150,7 @@
                         </div>
             </div>
         </section>
-        <section class="contact-form-container">
+        <section id='contact' class="contact-form-container">
             <h3>ready to talk about your next project?</h3>
             <button>Contact us</button>
         </section>
@@ -229,5 +234,6 @@
         </section>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="./js/script.js"></script>
 </html>

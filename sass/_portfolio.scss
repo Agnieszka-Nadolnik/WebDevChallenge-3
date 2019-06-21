@@ -8,12 +8,21 @@
         text-transform: $t-t;
         padding-bottom: 10px;
         font-size: $f-s-title;
+
+        @media #{$tablet} {   
+            font-size: 2em;
+            padding-bottom: 15px;       
+        }
     }
 
     p {
-        padding-bottom: 15px;
         font-size: $f-s-small;
         padding-bottom: 30px;
+
+        @media #{$tablet} {   
+            font-size: $f-s-p;
+            padding-bottom: 40px;       
+        }
     }
 
     .technologies {
@@ -22,6 +31,11 @@
         h5 {
             text-transform: $t-t;
             padding-bottom: 15px;
+
+            @media #{$tablet} {   
+                font-size: 1em;
+                padding-bottom: 25px; 
+            }
         }
 
         .content-li {
@@ -32,6 +46,10 @@
                 height: 50px;
                 width: 50px;
                 margin-right: 25px;
+
+                @media #{$tablet} {   
+                    margin-right: 40px;   
+                }
             }
 
             .description {
@@ -39,6 +57,10 @@
                 h3 {
                     text-transform: $t-t;
                     font-size: $f-s-p;
+
+                    @media #{$tablet} {   
+                        font-size: 1.2em;   
+                    }
                 }
             }
         }
@@ -50,6 +72,10 @@
     text-transform: $t-t;
     color: $c-g;
     display: flex;
+
+    @media #{$tablet} {   
+        font-size: 1.2em;   
+    }
 
     i {
         animation: arrow 0.5s alternate linear infinite backwards;

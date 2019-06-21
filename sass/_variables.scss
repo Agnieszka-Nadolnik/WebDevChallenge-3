@@ -6,6 +6,13 @@ $f-s-p: 1em;
 $f-s-small: 0.8em;
 
 
+$buttonWidth: 30px;
+$buttonHeight: 26px;
+$buttonColor: black;
+$lineThickness: 4px;
+$transitionSpeed: .25s;
+$transitionEasing: ease-in-out;
+
 %main-container {
     width: 100%;
     padding: 30px 40px;
@@ -22,9 +29,15 @@ $f-s-small: 0.8em;
     color: white;
     transition: 0.4s;
     cursor: pointer;
+    z-index: inherit;
 
     &:hover {
         background-color: white;
         color: $c-g;
     }
 }
+
+//Media Queries
+
+$tablet: "(min-width: 600px)";
+$desktop-s: '(min-width: 700px)';

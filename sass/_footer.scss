@@ -10,5 +10,9 @@
     h6 {
         padding: 15px 0;
         text-align: center;
+
+        @media #{$tablet} {
+            font-size: 0.8em;
+        }
     }
 }

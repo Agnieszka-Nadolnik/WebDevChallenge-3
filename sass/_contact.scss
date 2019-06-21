@@ -8,14 +8,27 @@
     align-items: center;
     text-transform: $t-t;
 
+
+
     h3 {
         font-size: $f-s-title;
         text-align: center;
+
+
+        @media #{$tablet} {
+            font-size: 2em;
+            padding: 30px;
+        }
     }
 
     button {
         @extend %button;
         border: 2px solid white;
         margin-top: 20px;
+
+        @media #{$tablet} {
+            margin-top: 30px;
+            font-size: 1em;
+        }
     }
 }

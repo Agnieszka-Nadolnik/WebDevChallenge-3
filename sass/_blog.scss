@@ -1,53 +1,112 @@
 .blog-container {
     width: 100%;
-    background-image: url('../images/BackgroundII.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white;
+    background-color: $c-grey;
+    display: flex;
 
-    .blog-components {
-        @extend %main-container;
-        height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.7);
+    .img-container{
+        position: relative;
+        width: 30%;
+        display: none;
 
-        h3 {
-            font-size: $f-s-title;
-            text-transform: $t-t;
-
-            span {
-                color: $c-g;
-            }
+        @media #{$desktop-s} {   
+         display: block; 
         }
 
-        p {
-            text-align: justify;
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: imgrotate 10s linear infinite;
         }
 
-        p, ul {
-            font-size: $f-s-small;
-            margin: 30px 0;
+    }   
+
+    @keyframes imgrotate {
+        0% {
+            transform: rotate(0);
         }
 
-        ul {
-            li {
-                list-style: none;
-                display: flex;
-                align-items: center;
-                padding-bottom: 10px;
+        50% {
+            transform: rotate(180deg)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
 
-                &::before {
-                    content: url('../images/icon/Checkmark-2.png');
-                    padding-right: 20px;
+
+
+.blog-components {
+        width: 100%;
+        background-image: url('../images/BackgroundII.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+        z-index: 1;
+
+        @media #{$desktop-s} {   
+            width: 70%;   
+            
+        }
+
+        .text-blog{
+            @extend %main-container;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+            
+
+            h3 {
+                font-size: $f-s-title;
+                text-transform: $t-t;
+
+                @media #{$tablet} {   
+                font-size: 2em;   
                 }
 
+                span {
+                    color: $c-g;
+                }
+            }
+
+            p {
+                text-align: justify;
 
             }
-        }
 
-        .button-submit {
-            @extend %button;
+            p, ul {
+                font-size: $f-s-small;
+                margin: 30px 0;
+
+                @media #{$tablet} {   
+                font-size: 1em;   
+                }
+            }
+
+            ul {
+                li {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 10px;
+
+                    &::before {
+                        content: url('../images/icon/Checkmark-2.png');
+                        padding-right: 20px;
+                    }
+
+
+                }
+            }
+
+            .button-submit {
+                @extend %button;
+                @media #{$tablet} {   
+                font-size: 1em;   
+                }
+            }
         }
     }
 }

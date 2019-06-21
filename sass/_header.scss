@@ -5,10 +5,11 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
-
-    .hamburger {
-        z-index: 2;
+    
+    @media #{$tablet} {   
+        padding: 30px;
     }
+
 
     nav {
         position: absolute;
@@ -18,15 +19,24 @@
         top: 0;
         right: -50%;
         transition: 1s;
+
         li {
             font-size: 1em;
             list-style: none;
             line-height: 20px;
             padding: 5%;
             transition: 0.3s;
+            @media #{$tablet} {   
+             font-size: 1.5em;   
+            }
 
             &:hover {
                 padding-left: 10%;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
             }
         }
     }
@@ -36,3 +46,60 @@ nav.active-menu {
     
 }
 
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 2;
+    
+  }
+
+  .menu-toggle {
+    position: relative;
+    display: block;
+    width: $buttonWidth;
+    height: $buttonHeight;
+    
+    background: transparent;
+    border-top: $lineThickness solid;
+    border-bottom: $lineThickness solid;
+    
+    color: $buttonColor;
+    font-size: 0;
+    
+    transition: all $transitionSpeed $transitionEasing;
+  
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: $lineThickness;
+      
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      
+      background: currentColor;
+      
+      transform: translate(-50%, -50%);
+      transition: transform $transitionSpeed $transitionEasing;
+    } 
+  }
+  
+  button:hover {
+    color: lighten($buttonColor, 15%);
+  }
+  
+  button.is-active {
+    border-color: transparent;
+  
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+  

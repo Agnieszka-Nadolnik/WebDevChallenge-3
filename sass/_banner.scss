@@ -6,6 +6,11 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    @media #{$tablet} {   
+        margin-top: 50px;    
+    }
+   
+
     .main-image {
         background-color: rgba($color: #000000, $alpha: 0.7);
         height: 100%;
@@ -19,19 +24,34 @@
             text-align: center;
             margin-top: 20px;
             color: white;
+
+            @media #{$tablet} {   
+                margin-top: 30px;  
+               }
         }
 
         h1 {
             font-size: 1.5em;
             text-transform: uppercase;
+
+            @media #{$tablet} {   
+                font-size: 2em;
+            }
         }
 
         p {
             font-size: $f-s-p;
+            @media #{$tablet} {   
+             font-size: 1.5em;   
+            }
         }
 
         .button-submit {
             @extend %button;
+
+            @media #{$tablet} {   
+             font-size: 1em;   
+            }
         }
     }
    
