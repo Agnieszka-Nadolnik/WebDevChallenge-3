@@ -5,11 +5,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    @media #{$desktop-m} {
+        flex-direction: row;
+    }
     
 
     .post-content,
     .contact-content,
     .tweet-content {
+
+        @media #{$desktop-m} {
+            padding: 20px;
+        }
         h5 {
             font-size: $f-s-p;
             text-transform: $t-t;
@@ -19,13 +27,22 @@
             @media #{$tablet} {
                 font-size: 1.2em;
             }
-            
-        
+
+            @media #{$desktop-m} {
+
+                text-align: center;
+            }
         }
 
         
         ul {
-            display: none;
+            display: none;  
+
+            @media #{$desktop-m} {
+                display: block;
+            }
+
+
             
 
             li {
@@ -33,10 +50,14 @@
                 font-size: $f-s-small;
                 display: flex;
                 align-items: center;
-                
-                @media #{$tablet} {
-                    font-size: 1em;
+
+
+               
+
+                @media #{$desktop-m} {
+                    font-size: 0.8em;
                 }
+
                 
                 img {
                     margin: 10px 10px 10px 0;

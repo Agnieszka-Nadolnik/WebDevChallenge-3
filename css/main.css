@@ -214,12 +214,6 @@ button.is-active:after {
 }
 
 @media (min-width: 600px) {
-  .banner-container .main-image p {
-    font-size: 1.5em;
-  }
-}
-
-@media (min-width: 600px) {
   .banner-container .main-image .button-submit {
     font-size: 1em;
   }
@@ -250,12 +244,6 @@ button.is-active:after {
   padding: 25px;
 }
 
-@media (min-width: 600px) {
-  .services-container h3 {
-    font-size: 2em;
-  }
-}
-
 .services-container .about-page-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,9 +261,29 @@ button.is-active:after {
   margin-top: 40px;
 }
 
+@media (min-width: 800px) {
+  .services-container .about-page-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 90%;
+  }
+}
+
 .services-container .about-page-container div {
-  margin: 0 30px;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
   line-height: 1.5em;
+}
+
+@media (min-width: 800px) {
+  .services-container .about-page-container div {
+    padding: 10px;
+  }
 }
 
 .services-container .about-page-container div img {
@@ -286,20 +294,8 @@ button.is-active:after {
   text-transform: uppercase;
 }
 
-@media (min-width: 600px) {
-  .services-container .about-page-container div h4 {
-    font-size: 1.2em;
-  }
-}
-
 .services-container .about-page-container div p {
   font-size: 0.8em;
-}
-
-@media (min-width: 600px) {
-  .services-container .about-page-container div p {
-    font-size: 1em;
-  }
 }
 
 .blog-container {
@@ -391,7 +387,7 @@ button.is-active:after {
 
 @media (min-width: 600px) {
   .blog-container .blog-components .text-blog h3 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
@@ -406,12 +402,6 @@ button.is-active:after {
 .blog-container .blog-components .text-blog p, .blog-container .blog-components .text-blog ul {
   font-size: 0.8em;
   margin: 30px 0;
-}
-
-@media (min-width: 600px) {
-  .blog-container .blog-components .text-blog p, .blog-container .blog-components .text-blog ul {
-    font-size: 1em;
-  }
 }
 
 .blog-container .blog-components .text-blog ul li {
@@ -430,13 +420,8 @@ button.is-active:after {
   padding-right: 20px;
 }
 
-@media (min-width: 600px) {
-  .blog-container .blog-components .text-blog .button-submit {
-    font-size: 1em;
-  }
-}
-
 .portfolio-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -447,6 +432,15 @@ button.is-active:after {
   font-size: 1em;
 }
 
+@media (min-width: 800px) {
+  .portfolio-container {
+    background-image: url("../images/isometric iPad Air.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+  }
+}
+
 .portfolio-container h2 {
   text-transform: uppercase;
   padding-bottom: 10px;
@@ -455,7 +449,6 @@ button.is-active:after {
 
 @media (min-width: 600px) {
   .portfolio-container h2 {
-    font-size: 2em;
     padding-bottom: 15px;
   }
 }
@@ -467,13 +460,18 @@ button.is-active:after {
 
 @media (min-width: 600px) {
   .portfolio-container p {
-    font-size: 1em;
     padding-bottom: 40px;
   }
 }
 
 .portfolio-container .technologies {
   padding: 25px 0;
+}
+
+@media (min-width: 800px) {
+  .portfolio-container .technologies {
+    width: 50%;
+  }
 }
 
 .portfolio-container .technologies h5 {
@@ -512,12 +510,6 @@ button.is-active:after {
   font-size: 1em;
 }
 
-@media (min-width: 600px) {
-  .portfolio-container .technologies .content-li .description h3 {
-    font-size: 1.2em;
-  }
-}
-
 .view-link {
   text-decoration: none;
   text-transform: uppercase;
@@ -525,12 +517,6 @@ button.is-active:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-@media (min-width: 600px) {
-  .view-link {
-    font-size: 1.2em;
-  }
 }
 
 .view-link i {
@@ -574,12 +560,6 @@ button.is-active:after {
   font-size: 1em;
 }
 
-@media (min-width: 600px) {
-  .values-container {
-    font-size: 1em;
-  }
-}
-
 .values-container h3 {
   text-transform: uppercase;
   font-size: 1.5em;
@@ -589,7 +569,6 @@ button.is-active:after {
 
 @media (min-width: 600px) {
   .values-container h3 {
-    font-size: 2em;
     padding-bottom: 20px;
   }
 }
@@ -665,12 +644,6 @@ button.is-active:after {
   font-size: 1.5em;
   text-transform: uppercase;
   margin-bottom: 10px;
-}
-
-@media (min-width: 600px) {
-  .client-comment-container h3 {
-    font-size: 2em;
-  }
 }
 
 .content-comment {
@@ -759,7 +732,6 @@ button.is-active:after {
 
 @media (min-width: 600px) {
   .contact-form-container h3 {
-    font-size: 2em;
     padding: 30px;
   }
 }
@@ -807,6 +779,23 @@ button.is-active:after {
       justify-content: space-around;
 }
 
+@media (min-width: 800px) {
+  .footer-contact-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 800px) {
+  .footer-contact-container .post-content,
+  .footer-contact-container .contact-content,
+  .footer-contact-container .tweet-content {
+    padding: 20px;
+  }
+}
+
 .footer-contact-container .post-content h5,
 .footer-contact-container .contact-content h5,
 .footer-contact-container .tweet-content h5 {
@@ -824,10 +813,26 @@ button.is-active:after {
   }
 }
 
+@media (min-width: 800px) {
+  .footer-contact-container .post-content h5,
+  .footer-contact-container .contact-content h5,
+  .footer-contact-container .tweet-content h5 {
+    text-align: center;
+  }
+}
+
 .footer-contact-container .post-content ul,
 .footer-contact-container .contact-content ul,
 .footer-contact-container .tweet-content ul {
   display: none;
+}
+
+@media (min-width: 800px) {
+  .footer-contact-container .post-content ul,
+  .footer-contact-container .contact-content ul,
+  .footer-contact-container .tweet-content ul {
+    display: block;
+  }
 }
 
 .footer-contact-container .post-content ul li,
@@ -843,11 +848,11 @@ button.is-active:after {
           align-items: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .footer-contact-container .post-content ul li,
   .footer-contact-container .contact-content ul li,
   .footer-contact-container .tweet-content ul li {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 

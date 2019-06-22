@@ -41,9 +41,6 @@
 
         p {
             font-size: $f-s-p;
-            @media #{$tablet} {   
-             font-size: 1.5em;   
-            }
         }
 
         .button-submit {

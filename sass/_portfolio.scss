@@ -1,8 +1,19 @@
 .portfolio-container {
     @extend %main-container;
+    position: relative;
     display: flex;
     flex-direction: column;
     font-size: $f-s-p;
+
+    @media #{$desktop-m} {   
+        background-image: url('../images/isometric\ iPad\ Air.png');
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        
+    }
+
+
 
     h2 {
         text-transform: $t-t;
@@ -10,7 +21,6 @@
         font-size: $f-s-title;
 
         @media #{$tablet} {   
-            font-size: 2em;
             padding-bottom: 15px;       
         }
     }
@@ -20,13 +30,18 @@
         padding-bottom: 30px;
 
         @media #{$tablet} {   
-            font-size: $f-s-p;
             padding-bottom: 40px;       
         }
     }
 
+   
+
     .technologies {
         padding: 25px 0;
+
+        @media #{$desktop-m} {   
+            width: 50%;
+        }
 
         h5 {
             text-transform: $t-t;
@@ -58,9 +73,6 @@
                     text-transform: $t-t;
                     font-size: $f-s-p;
 
-                    @media #{$tablet} {   
-                        font-size: 1.2em;   
-                    }
                 }
             }
         }
@@ -73,14 +85,13 @@
     color: $c-g;
     display: flex;
 
-    @media #{$tablet} {   
-        font-size: 1.2em;   
-    }
 
     i {
         animation: arrow 0.5s alternate linear infinite backwards;
     }
 }
+
+
 
 
 @keyframes arrow {
