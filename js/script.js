@@ -6,6 +6,8 @@ hamburger.addEventListener('click', function() {
     menu.classList.toggle('active-menu');
 })
 
+
+
 for (let i=0; i<footerList.length; i++) {
     footerList[i].addEventListener('click',  function() {
     
@@ -14,9 +16,11 @@ for (let i=0; i<footerList.length; i++) {
 }
 
 
-$('button').on('click', function() {
+$('button.menu-toggle').on('click', function() {
     $(this).toggleClass('is-active');
   });
+
+
 
 
 

@@ -20,6 +20,10 @@
         align-items: center;
         justify-content: center;
 
+        @media #{$tablet} {   
+            padding: 10%;   
+        }
+
         h1, p, button {
             text-align: center;
             margin-top: 20px;

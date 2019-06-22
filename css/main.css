@@ -238,6 +238,12 @@ button.is-active:after {
           justify-content: center;
 }
 
+@media (min-width: 600px) {
+  .banner-container .main-image {
+    padding: 10%;
+  }
+}
+
 .banner-container .main-image h1, .banner-container .main-image p, .banner-container .main-image button {
   text-align: center;
   margin-top: 20px;
