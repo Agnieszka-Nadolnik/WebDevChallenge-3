@@ -6,16 +6,21 @@
     flex-direction: column;
     justify-content: space-around;
 
-    @media #{$desktop-m} {
+    @media #{$tablet-m} {
         flex-direction: row;
     }
+
+    @media #{$desktop-xs} {   
+        padding: $container-d;
+    }
+
     
 
     .post-content,
     .contact-content,
     .tweet-content {
 
-        @media #{$desktop-m} {
+        @media #{$tablet-m} {
             padding: 20px;
         }
         h5 {
@@ -28,9 +33,9 @@
                 font-size: 1.2em;
             }
 
-            @media #{$desktop-m} {
-
+            @media #{$tablet-m} {
                 text-align: center;
+                
             }
         }
 
@@ -38,8 +43,10 @@
         ul {
             display: none;  
 
-            @media #{$desktop-m} {
+            @media #{$tablet-m} {
                 display: block;
+                margin: 10px;
+                
             }
 
 
@@ -54,7 +61,7 @@
 
                
 
-                @media #{$desktop-m} {
+                @media #{$tablet-m} {
                     font-size: 0.8em;
                 }
 

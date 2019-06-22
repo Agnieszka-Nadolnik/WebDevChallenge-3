@@ -10,7 +10,6 @@ for (let i=0; i<footerList.length; i++) {
     footerList[i].addEventListener('click',  function() {
     
      this.lastElementChild.classList.toggle('active-list-element');
-    console.log('działa' + i);
     } )
 }
 

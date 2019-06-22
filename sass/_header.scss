@@ -5,9 +5,14 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
     
     @media #{$tablet} {   
         padding: 30px;
+    }
+
+    @media #{$desktop-xs} {   
+        padding: 30px 50px;
     }
 
 
@@ -20,23 +25,60 @@
         right: -50%;
         transition: 1s;
 
-        li {
-            font-size: 1em;
-            list-style: none;
-            line-height: 20px;
-            padding: 5%;
-            transition: 0.3s;
-            @media #{$tablet} {   
-             font-size: 1.5em;   
-            }
+       
+        @media #{$desktop-xs} {   
+            position: static;
+            width: 80%;
+            padding: 0;
+            transition: 0;
+        }
 
-            &:hover {
-                padding-left: 10%;
-            }
 
-            a {
-                text-decoration: none;
-                color: black;
+        ul {
+
+             
+        @media #{$desktop-xs} {   
+            display: flex;
+            justify-content: flex-end;
+        }
+
+            li {
+                font-size: $f-s-p;
+                list-style: none;
+                line-height: 20px;
+                padding: 5%;
+                text-transform: uppercase;
+                transition: 0.3s;
+            
+
+
+                @media #{$tablet} {   
+                font-size: 1em;   
+                }
+
+
+                @media #{$desktop-xs} {   
+                    padding: 2%;
+                    line-height: 0;
+                    transition: 0;
+                    
+                }
+        
+
+                &:hover {
+                    padding-left: 10%;
+
+                    @media #{$desktop-xs} {   
+                        padding-left: 2%;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    display: inline-block;
+                    font-weight: 700;
+                }
             }
         }
     }
@@ -50,8 +92,7 @@ button {
     border: none;
     cursor: pointer;
     outline: none;
-    z-index: 2;
-    
+    z-index: 3;
   }
 
   .menu-toggle {
@@ -85,6 +126,13 @@ button {
       transform: translate(-50%, -50%);
       transition: transform $transitionSpeed $transitionEasing;
     } 
+
+
+    @media #{$desktop-xs} {   
+        display: none;
+    }
+
+
   }
   
   button:hover {

@@ -1,36 +1,46 @@
 .portfolio-container {
     @extend %main-container;
-    position: relative;
     display: flex;
     flex-direction: column;
     font-size: $f-s-p;
 
-    @media #{$desktop-m} {   
+    @media #{$tablet-m} {   
         background-image: url('../images/isometric\ iPad\ Air.png');
         background-position: right center;
         background-repeat: no-repeat;
-        background-size: 50%;
-        
+        background-size: 50%;   
     }
 
+    @media #{$desktop-xs} {   
+        padding: $container-d;
+    }
 
 
     h2 {
         text-transform: $t-t;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
         font-size: $f-s-title;
 
         @media #{$tablet} {   
             padding-bottom: 15px;       
         }
+
+        @media #{$desktop-xs} {   
+            font-size: 2em;
+        }
     }
 
     p {
-        font-size: $f-s-small;
+        font-family: $f-f-p;
         padding-bottom: 30px;
 
         @media #{$tablet} {   
             padding-bottom: 40px;       
+        }
+
+        @media #{$desktop-xs} {   
+            font-size: $f-s-p;
+            padding-bottom: 50px
         }
     }
 
@@ -39,7 +49,7 @@
     .technologies {
         padding: 25px 0;
 
-        @media #{$desktop-m} {   
+        @media #{$tablet-m} {   
             width: 50%;
         }
 
@@ -48,8 +58,11 @@
             padding-bottom: 15px;
 
             @media #{$tablet} {   
-                font-size: 1em;
-                padding-bottom: 25px; 
+                font-size: 1em; 
+            }
+
+            @media #{$desktop-xs} {   
+                font-size: 1.2em;
             }
         }
 
@@ -73,7 +86,19 @@
                     text-transform: $t-t;
                     font-size: $f-s-p;
 
+                    @media #{$desktop-xs} {   
+                        font-size: 1.2em;
+                    }
                 }
+
+                p {
+                    font-size: $f-s-small;
+
+                    @media #{$desktop-xs} {   
+                        font-size: $f-s-p;
+                    }
+                }
+
             }
         }
     }
@@ -85,9 +110,17 @@
     color: $c-g;
     display: flex;
 
+    @media #{$desktop-xs} {   
+        font-size: 1.2em;
+    }
+
 
     i {
         animation: arrow 0.5s alternate linear infinite backwards;
+
+        @media #{$desktop-xs} {   
+            font-size: 1.2em;
+        }
     }
 }
 

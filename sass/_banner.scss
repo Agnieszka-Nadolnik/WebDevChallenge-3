@@ -37,10 +37,20 @@
             @media #{$tablet} {   
                 font-size: 2em;
             }
+
+            @media #{$desktop-xs} {   
+                font-size: 2.5em;
+            }
         }
 
         p {
             font-size: $f-s-p;
+            font-family: $f-f-p;
+            color: $f-c-background;
+
+            @media #{$desktop-xs} {   
+                font-size: 1.2em;
+            }
         }
 
         .button-submit {
@@ -48,6 +58,10 @@
 
             @media #{$tablet} {   
              font-size: 1em;   
+            }
+
+            @media #{$desktop-xs} {   
+                font-size: 1.2em;
             }
         }
     }

@@ -7,23 +7,33 @@
     font-size: $f-s-p;
     text-align: center;
 
+
+    @media #{$desktop-xs} {   
+        padding: $container-d;
+    }
+
     
 
         h3 {
             width: 300px;
             text-transform: $t-t;
             font-size: $f-s-title;
-            padding: 25px;
+            padding-bottom: 15px;
+
+            @media #{$desktop-xs} {   
+                font-size: 2em;
+            }
         }
 
         .about-page-container {
+            width: 70vw;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             margin-top: 40px;
 
-            @media #{$desktop-m} {  
+            @media #{$tablet-m} {  
                 flex-direction: row;
                 justify-content: space-around;
                 width: 90%;
@@ -36,7 +46,7 @@
                 flex-grow: 3;
                 line-height: 1.5em;
 
-                @media #{$desktop-m} {  
+                @media #{$tablet-m} {  
                     padding: 10px;
                    }
                 
@@ -48,10 +58,18 @@
                 h4 {
                     text-transform: $t-t;
 
+                    @media #{$desktop-xs} {   
+                        font-size: 1.2em;
+                    }
                     
                 }
                 p {
                     font-size: $f-s-small;
+                    font-family: $f-f-p;
+
+                    @media #{$desktop-xs} {   
+                        font-size: $f-s-p;
+                    }
 
                   
                  }

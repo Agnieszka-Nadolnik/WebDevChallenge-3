@@ -5,6 +5,11 @@
     align-items: center;
     justify-content: space-around;
 
+    @media #{$desktop-xs} {   
+        padding: $container-d;
+    }
+
+
     img {
         padding: 20px;
     }

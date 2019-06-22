@@ -8,6 +8,11 @@
     align-items: center;
     text-transform: $t-t;
 
+    @media #{$desktop-xs} {   
+        padding: $container-d;
+    }
+
+
 
 
     h3 {
@@ -17,6 +22,10 @@
 
         @media #{$tablet} {
             padding: 30px;
+        }
+
+        @media #{$desktop-xs} {   
+            font-size: 2em;
         }
     }
 

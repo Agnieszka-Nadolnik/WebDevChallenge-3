@@ -7,51 +7,74 @@
     justify-content: center;
     font-size: $f-s-p;
 
-
-    h3 {
-        text-transform: $t-t;
-        font-size: $f-s-title;
-        text-align: center;
-        padding-bottom: 15px;
-
-        @media #{$tablet} {   
-            padding-bottom: 20px;  
-           }
-        
+    @media #{$desktop-xs} {   
+        padding: $container-d;
     }
 
-    p {
-        text-align: center;
-    }
-
-    .content-values {
-        width: 70vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        // @media #{$desktop-m} {   
-        //     flex-direction: row;  
-        // }
-
-        
-        .values-feature {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 40px;
-
-        @media #{$tablet} {   
-            padding-top: 60px;    
-           }
 
 
-        h5 {
-            padding: 20px 0 10px 0;
+        h3 {
             text-transform: $t-t;
+            font-size: $f-s-title;
+            text-align: center;
+            padding-bottom: 15px;
+
+            @media #{$tablet} {   
+                padding-bottom: 20px;  
+            }
+
+            @media #{$desktop-xs} {   
+                font-size: 2em;
+            }
+            
         }
+
+        p {
+            text-align: center;
+            font-family: $f-f-p;
         }
+
+        .content-values {
+            position: relative;
+            width: 80vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media #{$tablet-xl} {   
+                flex-direction: row;  
+            }
+
+
+            
+            .values-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+
+            @media #{$tablet-xl} {   
+                padding: 60px 10px;
+                width: calc(100 / 3);  
+                justify-content: space-around; 
+            }
+
+
+            h5 {
+                padding: 20px 0 20px 0;
+                text-transform: $t-t;
+                text-align: center;
+
+                @media #{$desktop-xs} {   
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+     
     }
 }
+
+    

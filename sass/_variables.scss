@@ -1,9 +1,12 @@
 $c-g: #7cc576;
 $c-grey: #f9f9f9; 
+$f-c-background: #CCCC;
 $t-t: uppercase;
 $f-s-title: 1.5em;
 $f-s-p: 1em;
 $f-s-small: 0.8em;
+$f-f-p: 'Roboto Slab', serif;
+
 
 
 $buttonWidth: 30px;
@@ -17,6 +20,8 @@ $transitionEasing: ease-in-out;
     width: 100%;
     padding: 30px 40px;
 }
+
+
 
 
 %button {
@@ -40,5 +45,11 @@ $transitionEasing: ease-in-out;
 //Media Queries
 
 $tablet: "(min-width: 600px)";
-$desktop-s: '(min-width: 700px)';
-$desktop-m: '(min-width: 800px)';
+$tablet-s: '(min-width: 700px)';
+$tablet-m: '(min-width: 800px)';
+$tablet-xl: '(min-width: 900px)';
+$desktop-xs: '(min-width: 1025px)';
+
+
+$container-d: 50px 60px;
+

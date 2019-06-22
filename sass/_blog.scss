@@ -3,20 +3,20 @@
     background-color: $c-grey;
     display: flex;
 
-    .img-container{
+    .img-container {
         position: relative;
         width: 30%;
         display: none;
 
-        @media #{$desktop-s} {   
+        @media #{$tablet-s} {   
          display: block; 
         }
 
-        img {
+        img.gear {
             position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            display: block;
+            top: 50%;
+            left: 100%;
             animation: imgrotate 10s linear infinite;
         }
 
@@ -24,14 +24,14 @@
 
     @keyframes imgrotate {
         0% {
-            transform: rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
         }
 
         50% {
-            transform: rotate(180deg)
+            transform: translate(-50%, -50%) rotate(180deg);
         }
         100% {
-            transform: rotate(360deg)
+            transform: translate(-50%, -50%) rotate(360deg);
         }
     }
 
@@ -47,7 +47,7 @@
         color: white;
         z-index: 1;
 
-        @media #{$desktop-s} {   
+        @media #{$tablet-s} {   
             width: 70%;   
         }
 
@@ -55,8 +55,11 @@
             @extend %main-container;
             height: 100%;
             background-color: rgba($color: #000000, $alpha: 0.7);
-            
 
+            @media #{$desktop-xs} {   
+                padding: $container-d;
+            }
+        
             h3 {
                 font-size: $f-s-title;
                 text-transform: $t-t;
@@ -65,6 +68,11 @@
                 font-size: 1.5em;   
                 }
 
+                @media #{$desktop-xs} {   
+                    font-size: 2em;
+                }
+            
+
                 span {
                     color: $c-g;
                 }
@@ -72,12 +80,22 @@
 
             p {
                 text-align: justify;
+                font-family: $f-f-p;
+               @media #{$tablet-m} {
+                width: 70%;
+               }
 
             }
 
             p, ul {
                 font-size: $f-s-small;
                 margin: 30px 0;
+                color: $f-c-background;
+
+                @media #{$desktop-xs} {   
+                    font-size: $f-s-p;
+                }
+            
             }
 
             ul {
@@ -86,6 +104,7 @@
                     display: flex;
                     align-items: center;
                     padding-bottom: 10px;
+                    font-family: $f-f-p;
 
                     &::before {
                         content: url('../images/icon/Checkmark-2.png');
@@ -98,6 +117,10 @@
 
             .button-submit {
                 @extend %button;
+
+                @media #{$desktop-xs} {   
+                    font-size: $f-s-p;
+                }
             }
         }
     }
